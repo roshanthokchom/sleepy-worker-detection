@@ -8,6 +8,10 @@ To detect the face in the image, we need to first convert the image into graysca
 
 for (x,y,w,h) in faces: 
         cv2.rectangle(frame, (x,y), (x+w, y+h), (100,100,100), 1 )
+        
+        
+        
+        
 Step 3 – Detect the eyes from ROI and feed it to the classifier
 
 The same procedure to detect faces is used to detect eyes. First, we set the cascade classifier for eyes in leye and reye respectively then detect the eyes using left_eye = leye.detectMultiScale(gray). Now we need to extract only the eyes data from the full image. This can be achieved by extracting the boundary box of the eye and then we can pull out the eye image from the frame with this code.
